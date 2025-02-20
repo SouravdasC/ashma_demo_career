@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- CSS  -->
+  <link rel="stylesheet" href="./sass/main.css" />
+  <!-- FONT AWSOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- GOOGLE FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Todhri&family=Open+Sans:wght@300..800&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- AWSOME ICONS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+</head>
+
+<body>
+  <!-- BANNER  ---------------------------------------------->
+  <div class="banner">
+    <div class="left-section"></div>
+    <div class="center-section">
+      <img src="https://ashmamotors.com/images/redd.jpg" alt="" class="banner-img" />
+    </div>
+  </div>
+  <!-- HEADER START ---------------------------------------------->
+  <header class="sticky-top">
+    <nav class="navbar">
+      <!-- LOGO  -->
+      <div>
+        <a class="navbar-brand" href="/index.html">
+          <img src="https://ashmamotors.com/images/footer-logo.png" alt="logo" class="logo-img" />
+        </a>
+      </div>
+      <!-- MENU BAR  -->
+      <div class="menuBar-icons" onclick="toggleBtn()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <!-- MENU  -->
+      <div class="menuList" id="navMenu">
+        <ul class="menubar open-sans-custom merriweather-bold">
+          <li class="menu-items">
+            <a href="" class="menu-link"> home </a>
+          </li>
+          <li class="menu-items" id="">
+            <a class="menu-link" href="" id="company"> company </a>
+            <ul class="submenu-items" id="company-items">
+              <li>
+                <a href="" class="submenu-link">discover us</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">certificate</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items" id="">
+            <a class="menu-link" href="" id="company"> our products </a>
+            <ul class="submenu-items" id="company-items">
+              <li>
+                <a href="" class="submenu-link">discover us</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">certificate</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> apply dealership </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> career </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> service complaint </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> contact </a>
+          </li>
+        </ul>
+
+        <!-- ICONS  -->
+        <div class="social-iocns">
+          <a href="" class="social-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <!-- RESPONSIVE  -->
+      <div class="menuList" id="navMenu-responsive">
+        <ul class="menubar open-sans-custom">
+          <li class="menu-items">
+            <a href="" class="menu-link"> home </a>
+          </li>
+          <li class="menu-items" id="">
+            <button class="menu-link" onclick="subMenu()">
+              <span> company</span>
+              <i class="fa-solid fa-angle-down" id="downIcons"></i>
+              <i class="fa-solid fa-angle-up" id="upIcons"></i>
+            </button>
+            <ul class="resSubmenu" id="reSubMenuList">
+              <li>
+                <a href="" class="">discover us</a>
+              </li>
+              <li>
+                <a href="" class="">certificate</a>
+              </li>
+              <li>
+                <a href="" class="">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items" id="">
+            <button class="menu-link" onclick="subMenu2()">
+              <span> our product</span>
+              <i class="fa-solid fa-angle-down" id="downIcons1"></i>
+              <i class="fa-solid fa-angle-up" id="upIcons2"></i>
+            </button>
+            <ul class="resSubmenu" id="reSubMenuList2">
+              <li>
+                <a href="" class="">discover us</a>
+              </li>
+              <li>
+                <a href="" class="">certificate</a>
+              </li>
+              <li>
+                <a href="" class="">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> apply dealership </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> career </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> service complaint </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> contact </a>
+          </li>
+        </ul>
+
+        <!-- ICONS  -->
+        <div class="social-iocns">
+          <a href="" class="social-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- BORDER  -->
+    <div class="border-text"></div>
+  </header>
+  <!-- HEADER END  ---------------------------------------------->
+  <section>
+    <!-- IMG SECTION  -->
+    <div class="imgSection">
+      <img src="../image/career_banner_1.jpeg" alt="fontImg" />
+    </div>
+    <div class="jobApplyPage container">
+      <!-- JOB INFO  -->
+      <div class="jobInfo container">
+        <div class="jonInfo_1">
+          <h1 class="merriweather-regular-italic">Job Details</h1>
+          <!-- <div class="jobInfoDes">
+            <h5 class="liter-regular">Share this job</h5>
+            <span class="jobInfoDes_icons">
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </span>
+          </div> -->
+          <div class="jobInfoDes">
+            <h5 class="liter-regular">Available Locations</h5>
+            <span>
+              <i class="fa-solid fa-caret-right"></i>
+              <span class="merriweather-light_2">Kolkata, India</span>
+            </span>
+          </div>
+          <div class="jobInfoDes">
+            <h5 class="liter-regular">Category</h5>
+            <span class="merriweather-light_2"> Software Developer Jobs </span>
+          </div>
+          <div class="jobInfoDes">
+            <h5 class="liter-regular">Employment Type</h5>
+            <span class="merriweather-light_2"> Full-Time </span>
+          </div>
+          <div class="jobInfoDes">
+            <h5 class="liter-regular">Seniority</h5>
+            <span class="merriweather-light_2"> Senior </span>
+          </div>
+        </div>
+        <!-- Form ========================= -->
+        <div class="formDiv">
+          <div class="form-container" data-aos="zoom-in-left">
+            <h1 class="merriweather-regular">Apply For The Job</h1>
+            <p class="merriweather-light">Great things in business are never done alone. Let’s connect and explore how
+              we
+              can work together to
+              achieve your goals.</p>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name*</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone*</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+              </div>
+              <div class="mb-3">
+                <label for="inquiry" class="form-label">City*</label>
+                <input type="text" class="form-control" id="inquiry" placeholder="Your City" required>
+              </div>
+              <div class="mb-3">
+                <label for="inquiry" class="form-label">Pin*</label>
+                <input type="text" class="form-control" id="inquiry" placeholder="Your Pin" required>
+              </div>
+              <div class="mb-3">
+                <label for="state" class="form-label">Select State</label>
+                <select class="form-select" id="state">
+                  <option selected disabled>Select State</option>
+                  <option value="California">California</option>
+                  <option value="Texas">Texas</option>
+                  <option value="New York">New York</option>
+                  <option value="Florida">Florida</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="state" class="form-label">Experience</label>
+                <select class="form-select" id="state">
+                  <option selected disabled>Select State</option>
+                  <option value="California">6th month</option>
+                  <option value="California">1year</option>
+                  <option value="California">1year 6th month</option>
+                  <option value="California">2year</option>
+                  <option value="California">3year</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="state" class="form-label">Select Gender</label>
+                <select class="form-select" id="state">
+                  <option selected disabled>Select State</option>
+                  <option value="California">Male</option>
+                  <option value="California">FeMale</option>
+                  <option value="California">Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message (Optional)</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="btn-link w-100">
+                <a href="">submit</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- JOB DETAILS  -->
+      <div class="jobDetails">
+        <h1 class="merriweather-regular-italic">Job Description</h1>
+        <p>
+          We’re looking for talented website developers to join our team in
+          our Kolkata office. The candidates should at least be recent
+          Computer Science/Information Technology graduates with a solid
+          knowledge of PHP and experience in WordPress, Shopify, and MySQL.
+        </p>
+        <div class="jobDetails_info">
+          <h2 class="liter-regular">Roles & Responsibilities</h2>
+          <ul>
+            <li>Strong grasp in PHP OOPs concept and MVC frameworks.</li>
+            <li>Third-party API integration.</li>
+            <li>
+              Theme customization and plugin development in WooCommerce.
+            </li>
+            <li>Solid communication skills and fluency in English.</li>
+            <li>
+              Candidates should be willing to learn on the job, work with
+              other members, and contribute positively to the team.
+            </li>
+            <li>A positive and dynamic attitude is a necessity.</li>
+            <li>Good logical thinker with analytical skills.</li>
+          </ul>
+        </div>
+        <div class="jobDetails_info">
+          <h2 class="liter-regular">Roles & Responsibilities</h2>
+          <ul>
+            <li>Strong grasp in PHP OOPs concept and MVC frameworks.</li>
+            <li>Third-party API integration.</li>
+            <li>
+              Theme customization and plugin development in WooCommerce.
+            </li>
+            <li>Solid communication skills and fluency in English.</li>
+            <li>
+              Candidates should be willing to learn on the job, work with
+              other members, and contribute positively to the team.
+            </li>
+            <li>A positive and dynamic attitude is a necessity.</li>
+            <li>Good logical thinker with analytical skills.</li>
+          </ul>
+        </div>
+        <div class="jobDetails_info">
+          <h2 class="liter-regular">Requirements</h2>
+          <ul>
+            <li>Strong grasp in PHP OOPs concept and MVC frameworks.</li>
+            <li>Third-party API integration.</li>
+            <li>
+              Theme customization and plugin development in WooCommerce.
+            </li>
+            <li>Solid communication skills and fluency in English.</li>
+            <li>
+              Candidates should be willing to learn on the job, work with
+              other members, and contribute positively to the team.
+            </li>
+            <li>A positive and dynamic attitude is a necessity.</li>
+            <li>Good logical thinker with analytical skills.</li>
+          </ul>
+        </div>
+        <!-- <button class="liter-regular">
+            Apply now <i class="fa-solid fa-arrow-right-long"></i>
+          </button> -->
+        <!-- FORM  -->
+
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER  -->
+
+  <footer class="footer-main">
+    <div class="footer container">
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Dealership</h3>
+        <a href="#">Become a Dealer</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Ashma Products</h3>
+        <a href="#">E-rickshaw</a>
+        <a href="#">E-Loader</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Help</h3>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- <div style="color: white;" class="footer-text">
+      <div class="footer-border"></div>
+      <div class="footerlogo">
+        <img src="https://ashmamotors.com/images/footer-logo.png" alt="footer-logo">
+      </div>
+    </div> -->
+    <!-- FOOTER bg  -->
+    <div class="footer_bg">
+      <div class="footer_bg_one"></div>
+      <div class="footer_bg_two"></div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+
+</html>

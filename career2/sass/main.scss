@@ -1,0 +1,1037 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // border: 2px solid red;
+}
+
+// SECTION ======================================
+.jobApplyPage {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15rem;
+    margin-top: 2rem;
+
+    // JOB INFOP 
+    .jobInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        // border: 2px solid red;
+
+        .jonInfo_1 {
+            padding: 1rem;
+            box-shadow: 0px 0px 6px #c5cbd3;
+            border-radius: 5px;
+            // background-color: #0148a0;
+            // box-shadow: 0px 0px 6px #0148a0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        h1 {
+            // text-decoration: underline;
+            // text-decoration-thickness: 2px;
+        }
+
+        .jobInfoDes {
+            h5 {
+                font-size: 1.4rem;
+                color: gray;
+                margin-bottom: 0;
+            }
+
+            .jobInfoDes_icons {
+                a {
+                    text-decoration: none;
+                    margin-right: 1rem;
+
+                    i {
+                        font-size: 1.4rem;
+                        color: black;
+
+                        &:hover {
+                            border: 2px solid blue;
+                            padding: 0.2rem;
+                            border-radius: 50%;
+                            // color: red;
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
+    // JOB DETAILS 
+    .jobDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .jobDetails_info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+        }
+
+        button {
+            background-color: aqua;
+            font-size: 1.5rem;
+            font-weight: 700;
+            width: 12vw;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+        }
+    }
+
+}
+
+// SECTION END =====================================
+
+/* VARRIABLE ------------------------------------------------------------- */
+:root {
+    --hoverColor: #f0c;
+    --backgroundColor: radial-gradient(circle,
+            rgba(57, 30, 107, 1) 0%,
+            rgba(30, 14, 66, 1) 100%);
+    --abtSectionTxtColor: rgb(211, 93, 112);
+}
+
+/* BANNER  -------------------------------------------------------------*/
+
+.banner {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.left-section {
+    width: 32%;
+    background-color: white;
+}
+
+.banner-img {
+    width: 68vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.center-section {
+    width: 70%;
+    /* background-color: red;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%); */
+}
+
+/* HEADER START  -------------------------------------------------------------*/
+header {
+    /* color: white;     */
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--backgroundColor);
+}
+
+.social-iocns {
+    color: white;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 200px;
+}
+
+.menuBar-icons i {
+    color: white;
+    font-size: 20px;
+}
+
+.menuBar-icons {
+    display: none;
+}
+
+.menuList {
+    display: block;
+    display: flex;
+    gap: 4rem;
+}
+
+.menubar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    margin: 0;
+}
+
+/* MOBILE RESPOSIVE  */
+#navMenu-responsive {
+    display: none;
+}
+
+.menu-items {
+    position: relative;
+}
+
+.submenu-items {
+    background-color: black;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    padding-left: 0px;
+    list-style-type: none;
+    /* border: 2px solid blue; */
+    border-radius: 0 0 10px 10px;
+    /* padding: 5px 0 5px 10px; */
+    width: 9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 20px;
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.menu-link:hover::after {
+    color: var(--hoverColor);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    /* text-decoration: underline; */
+    color: var(--hoverColor);
+}
+
+.menu-link:hover {
+    color: var(--hoverColor);
+}
+
+.submenu-items li {
+    margin: 10px 0;
+}
+
+.submenu-items li:hover {
+    background-color: #2d5454;
+    /* background: radial-gradient(circle, rgba(57, 30, 107, 1) 0%, rgba(30, 14, 66, 1) 100%); */
+    border-radius: 5px;
+    padding: 10px 0;
+    transition: all 0.2s linear;
+}
+
+.menu-items:hover .submenu-items {
+    display: block;
+    opacity: 1;
+}
+
+.submenu-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 0.5px;
+    padding: 5px 0 5px 10px;
+}
+
+.social-iocns {
+    color: white;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: white;
+}
+
+.social-link:hover {
+    color: var(--hoverColor);
+    /* text-decoration: underline; */
+    transition: color linear;
+}
+
+/* FONTS ----------------------- */
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* BORDER  -----------------------*/
+.border-text {
+    border-bottom: 1px solid #6610f2;
+    padding: 2px;
+    background-color: rgb(221, 119, 204);
+    border-radius: 10px;
+}
+
+/* HEADER END -------------------------------------------------------------*/
+
+// GOOGLE FONTS 
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.merriweather-light_2 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.liter-regular {
+    font-family: "Liter", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* CONTACT US --------------------------------------------------------- */
+.imgSection img {
+    width: 99vw;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    position: relative;
+}
+
+.btn-2 h6 {
+    color: white;
+    letter-spacing: 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-2 h6:hover {
+    /* text-decoration: underline; */
+    transform: scale(1.05);
+    /* Tilts and slightly enlarges */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    /* Enhances shadow for depth */
+    color: var(--hoverColor);
+}
+
+.contact-div h1 {
+    text-transform: uppercase;
+}
+
+.location-details {
+    /* display: flex; */
+}
+
+.addressDetails p {
+    font-weight: 700;
+    color: gray;
+}
+
+.addressDetails p:hover {
+    font-weight: 700;
+    color: black;
+}
+
+.contactDetails p {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactDetails p a {
+    text-decoration: none;
+    color: gray;
+}
+
+.contactDetails p a:hover {
+    text-decoration: underline;
+    color: black;
+    font-weight: 700;
+}
+
+/* FONTS  */
+.noto-serif-todhri-regular {
+    font-family: "Noto Serif Todhri", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* FORM------- */
+.form-container {
+    max-width: 600px;
+    /* margin: 50px auto; */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+.btn-submit {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: #bb2d3b;
+}
+
+#manufacturingOffice {
+    display: none;
+    position: absolute;
+    top: 7rem;
+    left: 0;
+}
+
+.formDiv {
+    text-align: left;
+}
+
+#headOffice {
+    /* display: none; */
+}
+
+/* GOOGLE FONTS  */
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* CONTACT US END --------------------------------------------------------- */
+
+/* FOOTER START ---------------------------------------------- */
+.footer-main {
+    background: var(--backgroundColor);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+    color: white;
+    /* padding-top: 5rem; */
+    padding-bottom: 10rem;
+}
+
+.footer-column {
+    /* flex: 1; */
+    margin: 0 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    color: #6c757d;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+    color: var(--hoverColor);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--hoverColor);
+}
+
+/* FONTS  */
+.noto-serif-todhri-regular {
+    font-family: "Noto Serif Todhri", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.footer-text {
+    /* background-color: white; */
+    padding: 5rem 0;
+    position: relative;
+}
+
+.footer-border {
+    border: 2px solid white;
+
+}
+
+.footerlogo {
+    position: absolute;
+    top: 33%;
+    left: 42%;
+}
+
+.footer_bg {
+    position: absolute;
+    bottom: -127px;
+    background: url(https://ashmamotors.com/images/footer_bg.png) no-repeat center;
+    width: 100%;
+    height: 289px;
+    background-size: 100% 100%;
+    backdrop-filter: blur(60px);
+}
+
+.footer_bg_one {
+    background: url(https://ashmamotors.com/images/rickshaw.gif) no-repeat center center;
+    width: 200px;
+    height: 129px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+.footer_bg_two {
+    background: url(https://ashmamotors.com/images/rickshaw.gif) no-repeat center center;
+    width: 200px;
+    height: 120px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 40s linear infinite;
+    animation: myfirst 40s linear infinite;
+}
+
+@-moz-keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* FOOTER END ---------------------------------------------- */
+
+/* RESPOSIVE ----------------------------------------- */
+@media (max-width: 425px) {
+
+    .banner {
+        display: none;
+    }
+
+    /* LOGO  */
+    .logo-img {
+        width: 100px;
+    }
+
+    #navMenu {
+        display: none;
+    }
+
+    /* MENU  */
+    .menuBar-icons {
+        display: block;
+    }
+
+    #navMenu-responsive {
+        width: 100%;
+        position: absolute;
+        top: 3.2rem;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 1.5rem;
+        background: var(--backgroundColor);
+        padding: 1rem 1.5rem;
+        transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        border-radius: 10px 10px;
+    }
+
+    .menubar {
+        flex-direction: column;
+        align-items: normal;
+        gap: 1.2rem;
+        padding-left: 0;
+        list-style-type: disc;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-items::marker {
+        /* color: pink; */
+        color: green;
+    }
+
+    .menu-link {
+        font-size: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.2rem;
+        background: var(--backgroundColor);
+        border: none;
+    }
+
+    .menu-link i {
+        font-size: 20px;
+        /* margin-top: -0.2rem; */
+        padding: 1.2px 0;
+    }
+
+    .resSubmenu {
+        padding-left: 0rem;
+        background-color: black;
+        padding: 0.4rem 1rem;
+        width: 100%;
+        margin-top: 0.5rem;
+        /* display: block; */
+        transform: scaleY(1);
+        list-style-type: none;
+        border-radius: 10px;
+    }
+
+    .resSubmenu li a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: rgb(211, 207, 207);
+        font-size: 13px;
+    }
+
+    .resSubmenu li a:hover {
+        text-decoration: underline;
+        transition: all 0.2s linear;
+    }
+
+    /* SOCIAL ICONS  */
+    .social-iocns {
+        color: white;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    // HEADER END =======================================
+
+    // SECTION START ===============================
+    .jobApplyPage {
+        flex-direction: column;
+        gap: 2rem;
+
+        .jobDetails {
+            gap: 0;
+
+            button {
+                width: auto;
+            }
+        }
+    }
+
+    /* CONTACT US */
+    .contact-main {
+        flex-direction: column;
+    }
+
+    .contact-div h1 {
+        font-size: 19px;
+    }
+
+    .contact-btn-2 {
+        margin-bottom: 0;
+    }
+
+    .location-details {
+        margin-top: 1rem;
+    }
+
+    .addressDetails h4 {
+        font-size: 17px;
+    }
+
+    .addressDetails p {
+        font-size: small;
+    }
+
+    .contactDetails h4 {
+        font-size: 17px;
+    }
+
+    .contactDetails p a {
+        font-size: small;
+    }
+
+    .loactionMap iframe {
+        height: 50vh;
+        width: 93vw;
+    }
+
+    #manufacturingOffice {
+        position: relative;
+        top: 0;
+    }
+
+    .formDiv {
+        margin: 1.5rem 0;
+    }
+
+    .form-container {
+        width: 92vw;
+    }
+
+    .form-container p {
+        font-size: small;
+        margin-bottom: 0;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1.2rem;
+        /* padding-bottom: 0; */
+        padding: 1.2rem 1rem 5rem;
+    }
+
+    .footer_bg {
+        display: none;
+        height: 20vh;
+    }
+
+    // SECTION END ==============================================
+}
+
+/* MEDIUM SCREEN ------------------------- */
+@media (min-width: 426px) and (max-width: 768px) {
+
+    /* LOGO  */
+    .logo-img {
+        width: 100px;
+    }
+
+    #navMenu {
+        display: none;
+    }
+
+    /* .navbar {
+      justify-content: space-around;
+    } */
+    /* MENU  */
+    .menuBar-icons {
+        display: block;
+    }
+
+    #navMenu-responsive {
+        width: 100%;
+        position: absolute;
+        top: 3.2rem;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 1.5rem;
+        background: var(--backgroundColor);
+        padding: 1rem 1.5rem;
+        transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        border-radius: 10px 10px;
+    }
+
+    .menubar {
+        flex-direction: column;
+        align-items: normal;
+        gap: 1.2rem;
+        padding-left: 0;
+        list-style-type: disc;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-items::marker {
+        /* color: pink; */
+        color: green;
+    }
+
+    .menu-link {
+        font-size: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.2rem;
+        background: var(--backgroundColor);
+        border: none;
+    }
+
+    .menu-link i {
+        font-size: 20px;
+        /* margin-top: -0.2rem; */
+        padding: 1.2px 0;
+    }
+
+    .resSubmenu {
+        padding-left: 0rem;
+        background-color: black;
+        padding: 0.4rem 1rem;
+        width: 100%;
+        margin-top: 0.5rem;
+        /* display: block; */
+        transform: scaleY(1);
+        list-style-type: none;
+        border-radius: 10px;
+    }
+
+    .resSubmenu li a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: rgb(211, 207, 207);
+        font-size: 13px;
+    }
+
+    .resSubmenu li a:hover {
+        text-decoration: underline;
+        transition: all 0.2s linear;
+    }
+
+    /* SOCIAL ICONS  */
+    .social-iocns {
+        color: white;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // HEADER END ===================================
+
+    // SECTION START ======================================
+    .jobApplyPage {
+        font-size: small;
+        gap: 2.5rem;
+
+        .jobDetails {
+            button {
+                width: auto;
+            }
+        }
+    }
+
+    // SECTION END ======================================
+    /* CONTACT US -------------------- */
+    .contact-main {
+        flex-direction: column;
+    }
+
+    #headOffice {
+        position: relative;
+        top: 1rem;
+    }
+
+    #manufacturingOffice {
+        position: relative;
+        top: 1rem;
+    }
+
+    .loactionMap iframe {
+        width: 92vw;
+        height: 57vh;
+    }
+
+    .form-container {
+        max-width: fit-content;
+    }
+
+    /* SECTION END ---------------------------------*/
+    /* FOOTER ------------------------------------ */
+    .footer {
+        padding-bottom: 7rem;
+    }
+
+    .footer_bg {
+        height: 220px;
+        backdrop-filter: blur(32px);
+    }
+}
+
+/* LARGER SCREEN -------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo-img {
+        width: 100px;
+    }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        /* justify-content: flex-start; */
+        align-items: center;
+        /* gap: 1rem; */
+        background: var(--backgroundColor);
+    }
+
+    .menubar {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0.7rem;
+        margin: 0;
+    }
+
+    .menu-link {
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+        /* letter-spacing: 0.1rem; */
+        /* font-size: 20px; */
+        font-size: small;
+    }
+
+    .menuList {
+        display: block;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .menu-items {
+        font-weight: 300;
+    }
+
+    //   HEADER END ==========================
+
+    // SECTION START =====================================
+    .jobApplyPage {
+        font-size: small;
+        gap: 2.5rem;
+
+        .jobDetails {
+            button {
+                width: auto;
+            }
+        }
+    }
+
+    // SECTION END =====================================
+    /* CONTACT US -------------------------- */
+    .loactionMap iframe {
+        width: 45vw;
+    }
+
+    #manufacturingOffice {
+        position: relative;
+        top: 0;
+    }
+
+    .contact-main {
+        gap: 1rem;
+    }
+}

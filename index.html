@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- CSS  -->
+  <link rel="stylesheet" href="./sass/main.css" />
+  <!-- FONT AWSOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- GOOGLE FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif+Todhri&family=Open+Sans:wght@300..800&family=Oswald&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Smooch+Sans:wght@100..900&display=swap"
+    rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="./../career2/index.html"> -->
+</head>
+
+<body>
+  <!-- BANNER  ---------------------------------------------->
+  <div class="banner">
+    <div class="left-section"></div>
+    <div class="center-section">
+      <img src="https://ashmamotors.com/images/redd.jpg" alt="" class="banner-img" />
+    </div>
+  </div>
+  <!-- HEADER START ---------------------------------------------->
+  <header class="sticky-top">
+    <nav class="navbar">
+      <!-- LOGO  -->
+      <div>
+        <a class="navbar-brand" href="/index.html">
+          <img src="https://ashmamotors.com/images/footer-logo.png" alt="logo" class="logo-img" />
+        </a>
+      </div>
+      <!-- MENU BAR  -->
+      <div class="menuBar-icons" onclick="toggleBtn()"><i class="fa-solid fa-bars"></i></div>
+      <!-- MENU  -->
+      <div class="menuList" id="navMenu">
+        <ul class="menubar merriweather-bold">
+          <li class="menu-items">
+            <a href="" class="menu-link"> home </a>
+          </li>
+          <li class="menu-items" id="">
+            <a class="menu-link" href="" id="company"> company </a>
+            <ul class="submenu-items" id="company-items">
+              <li>
+                <a href="" class="submenu-link">discover us</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">certificate</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items" id="">
+            <a class="menu-link" href="" id="company"> our products </a>
+            <ul class="submenu-items" id="company-items">
+              <li>
+                <a href="" class="submenu-link">discover us</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">certificate</a>
+              </li>
+              <li>
+                <a href="" class="submenu-link">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> apply dealership </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> career </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> service complaint </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> contact </a>
+          </li>
+        </ul>
+
+        <!-- ICONS  -->
+        <div class="social-iocns">
+          <a href="" class="social-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <!-- RESPONSIVE  -->
+      <div class="menuList" id="navMenu-responsive">
+        <ul class="menubar open-sans-custom">
+          <li class="menu-items">
+            <a href="" class="menu-link"> home </a>
+          </li>
+          <li class="menu-items" id="">
+            <button class="menu-link" onclick="subMenu()">
+              <span> company</span>
+              <i class="fa-solid fa-angle-down" id="downIcons"></i>
+              <i class="fa-solid fa-angle-up" id="upIcons"></i>
+            </button>
+            <ul class="resSubmenu" id="reSubMenuList">
+              <li>
+                <a href="" class="">discover us</a>
+              </li>
+              <li>
+                <a href="" class="">certificate</a>
+              </li>
+              <li>
+                <a href="" class="">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items" id="">
+            <button class="menu-link" onclick="subMenu2()">
+              <span> our product</span>
+              <i class="fa-solid fa-angle-down" id="downIcons1"></i>
+              <i class="fa-solid fa-angle-up" id="upIcons2"></i>
+            </button>
+            <ul class="resSubmenu" id="reSubMenuList2">
+              <li>
+                <a href="" class="">discover us</a>
+              </li>
+              <li>
+                <a href="" class="">certificate</a>
+              </li>
+              <li>
+                <a href="" class="">visit us</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> apply dealership </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> career </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> service complaint </a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-link" href=""> contact </a>
+          </li>
+        </ul>
+
+        <!-- ICONS  -->
+        <div class="social-iocns">
+          <a href="" class="social-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="" class="social-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- BORDER  -->
+    <div class="border-text"></div>
+  </header>
+  <section>
+    <!-- IMG SECTION  -->
+    <div class="imgSection">
+      <img src="./image/career_banner_1.jpeg" alt="fontImg" />
+    </div>
+    <!-- INFO SECTION  -->
+    <div class="infoSection">
+      <!-- TITLE  -->
+      <div class="title container">
+        <h1 class="merriweather-regular-italic">Career With Ashma Motors</h1>
+        <h5 class="">Job Opportunities</h5>
+      </div>
+      <!-- JOB INFO  -->
+      <div class="jobInfo">
+        <div class="leftInfo">
+          <h1 class="merriweather-regular-italic">Jr. Executive</h1>
+          <div class="jobDescription">
+            <h4 class="titlePart">
+              <span class="merriweather-regular title1">Department: </span>
+              <span class="title2"> Admin</span>
+            </h4>
+            <h4>
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <span>gg</span>
+            </h4>
+            <h4>
+              <span><i class="fa-regular fa-clock"></i></span>
+              <span>intership</span>
+            </h4>
+            <h4>
+              <span><i class="fa-solid fa-money-bill-1"></i></span>
+              <span>ggg</span>
+            </h4>
+          </div>
+        </div>
+        <!-- BUTTON  -->
+        <div class="rightInfo">
+          <button class="btnInfo merriweather-regular">
+            <a href="./career2/index.html">apply now</a>
+          </button>
+          <div>
+            <span><i class="fa-solid fa-calendar-days"></i></span>
+            <span class="infoTitle">job Deadline: </span>
+            <span class="infoCalender">2022-24-11</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT US ---------------------------------------------- -->
+    <div class="contact-main container">
+      <div class="contact-div " data-aos="zoom-in-right">
+        <h1 class="merriweather-regular">contact us</h1>
+        <!-- BUTTON  -->
+        <div>
+          <button type="button" class="btn-link btn-2" onclick="button1()">
+            <h6 class="contact-btn-2">head office</h6>
+          </button>
+          <button type="button" class="btn-link btn-2" onclick="button2()">
+            <h6 class="contact-btn-2"> manufacturing facility</h6>
+          </button>
+        </div>
+        <!-- HEADOFFICE MENU  -->
+        <div class="contact-info" id="headOffice">
+          <!-- LOCATION ---- -->
+          <div class="location-details">
+            <!-- address  -->
+            <div class="addressDetails">
+              <h4 class="noto-serif-todhri-regular">Address</h4>
+              <p>
+                327/3 G.T.Road, Baidyabati (Opp. of Axis Bank), Hooghly, West
+                Bengal,India-712222
+              </p>
+            </div>
+            <!-- contact  -->
+            <div class="contactDetails">
+              <h4 class="noto-serif-todhri-regular">Contact</h4>
+              <p>
+                <a href=""><i class="fa-solid fa-phone"></i> +91 9147318023
+                  (Helpdesk)</a>
+                <a href=""><i class="fa-solid fa-phone"></i> +91 8697185501
+                  (Director)</a>
+                <a href=""><i class="fa-solid fa-envelope"></i> enquiry@ashmamotors.com</a>
+              </p>
+            </div>
+          </div>
+          <!-- location  -->
+          <div class="loactionMap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7356.642355831526!2d88.327895!3d22.79056!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1737619977715!5m2!1sen!2sin"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <!-- MANUFACTURING MENU  -->
+        <div class="contact-info" id="manufacturingOffice">
+          <!-- LOCATION ---- -->
+          <div class="location-details">
+            <!-- address  -->
+            <div class="addressDetails">
+              <h4 class="noto-serif-todhri-regular">Address</h4>
+              <p>
+                Nemai Tirtha Rd, Baidyabati
+                Hooghly, West Bengal,India-712222
+              </p>
+            </div>
+            <!-- contact  -->
+            <div class="contactDetails">
+              <h4 class="noto-serif-todhri-regular">Contact</h4>
+              <p>
+                <a href=""><i class="fa-solid fa-phone"></i> +91 9147318023
+                  (Helpdesk)</a>
+                <a href=""><i class="fa-solid fa-phone"></i> +91 8697185501
+                  (Director)</a>
+                <a href=""><i class="fa-solid fa-envelope"></i> enquiry@ashmamotors.com</a>
+              </p>
+            </div>
+          </div>
+          <!-- location  -->
+          <div class="loactionMap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14713.411379659748!2d88.319109!3d22.789386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f88569948ad7cb%3A0xcb8e7a34e402c30a!2sASHMA%20MOTORS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sus!4v1737620214867!5m2!1sen!2sus"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- FORM  -->
+      <div class="formDiv">
+        <div class="form-container" data-aos="zoom-in-left">
+          <h1 class="merriweather-regular">Get in Touch by Call</h1>
+          <p class="merriweather-light">Great things in business are never done alone. Let’s connect and explore how we
+            can work together to
+            achieve your goals.</p>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name*</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone*</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="inquiry" class="form-label">Inquiry Type*</label>
+              <input type="text" class="form-control" id="inquiry" placeholder="Inquiry Type" required>
+            </div>
+            <div class="mb-3">
+              <label for="state" class="form-label">Select State</label>
+              <select class="form-select" id="state">
+                <option selected disabled>Select State</option>
+                <option value="California">California</option>
+                <option value="Texas">Texas</option>
+                <option value="New York">New York</option>
+                <option value="Florida">Florida</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message (Optional)</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn-link w-100">
+              <a href="">submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER  -->
+
+  <footer class="footer-main">
+    <div class="footer container">
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Dealership</h3>
+        <a href="#">Become a Dealer</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Ashma Products</h3>
+        <a href="#">E-rickshaw</a>
+        <a href="#">E-Loader</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Help</h3>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="noto-serif-todhri-regular">Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- <div style="color: white;" class="footer-text">
+      <div class="footer-border"></div>
+      <div class="footerlogo">
+        <img src="https://ashmamotors.com/images/footer-logo.png" alt="footer-logo">
+      </div>
+    </div> -->
+    <!-- FOOTER bg  -->
+    <div class="footer_bg">
+      <div class="footer_bg_one"></div>
+      <div class="footer_bg_two"></div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+<script src="./script.js"></script>
+
+</html>
